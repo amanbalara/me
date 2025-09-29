@@ -34,36 +34,38 @@
   <div class="cursor-follower"></div>
 
   <!-- Hero Section -->
-  <section class="hero-gradient min-h-screen flex flex-col justify-center items-center text-white px-6 relative overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-tr from-purple-500/30 to-blue-500/30 animate-pulse"></div>
-    <div class="relative z-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-      <div class="flex justify-center">
-        <img id="profile-pic" src="aman.jpg" alt="Aman Balara" class="w-56 h-56 md:w-72 md:h-72 rounded-full border-4 border-yellow-400 shadow-2xl transform hover:scale-105 transition duration-300 cursor-pointer">
-
-      </div>
-      <div class="hero-content text-center md:text-left space-y-6">
-        <h1 class="text-4xl md:text-6xl font-extrabold animate-float drop-shadow-lg">
-          Yo, I’m <span class="text-yellow-300">Aman Balara</span>
-        </h1>
-        <p class="text-xl drop-shadow">Currently vibin’ at <strong>Vindy@IITD</strong></p>
-        <p class="text-lg md:text-xl max-w-xl">
-          Mechanical Engineering student 😅<br>
-          <span class="funny-comment"></span><br>
-          Also not getting marks 😢 — just vibin’!<br>
-          I’m more of a <span class="font-semibold">curious explorer</span> — always down to learn new things, try, fail, laugh, repeat. 🤙
-        </p>
-        <p class="text-lg">
-          Relationship status: <span class="status-badge">Me + Volleyball = Endless Block & Spike Saga 🏐💘</span>
-        </p>
-      </div>
-      <div class="flex gap-8 text-4xl justify-center md:justify-start mt-8">
-        <a href="https://www.instagram.com/aman_balara" target="_blank" class="social-icon text-white hover:text-pink-400"><i data-feather="instagram"></i></a>
-        <a href="https://github.com/amanbalara" target="_blank" class="social-icon text-white hover:text-purple-400"><i data-feather="github"></i></a>
-        <a href="https://www.linkedin.com/in/amanbalara/" target="_blank" class="social-icon text-white hover:text-blue-400"><i data-feather="linkedin"></i></a>
-        <a href="mailto:connect.amanbalara@gmail.com" class="social-icon text-white hover:text-red-400"><i data-feather="mail"></i></a>
-      </div>
+<section class="hero-gradient min-h-screen flex flex-col justify-center items-center text-white px-6 relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-tr from-purple-500/30 to-blue-500/30 animate-pulse"></div>
+  <div class="relative z-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div class="flex justify-center">
+      <img id="profile-pic" src="aman.jpg" alt="Aman Balara" class="w-56 h-56 md:w-72 md:h-72 rounded-full border-4 border-yellow-400 shadow-2xl transform hover:scale-105 transition duration-300 cursor-pointer">
     </div>
-  </section>
+    <div class="hero-content text-center md:text-left space-y-6">
+      <h1 class="text-4xl md:text-6xl font-extrabold animate-float drop-shadow-lg">
+        Yo, I’m <span class="text-yellow-300">Aman Balara</span>
+      </h1>
+      <p class="text-xl drop-shadow">Currently vibin’ at <strong>Vindy@IITD</strong></p>
+      
+      <!-- Updated bullet list -->
+      <ul class="text-lg md:text-xl max-w-xl list-disc list-inside space-y-2">
+        <li>Mechanical Engineering student 😅</li>
+        <li><span class="funny-comment"></span></li>
+        <li>Also not getting marks 😢 — just vibin’!</li>
+        <li>I’m more of a <span class="font-semibold">curious explorer</span> — always down to learn new things, try, fail, laugh, repeat. 🤙</li>
+      </ul>
+
+      <p class="text-lg">
+        Relationship status: <span class="status-badge">Me + Volleyball = Endless Block & Spike Saga 🏐💘</span>
+      </p>
+    </div>
+    <div class="flex gap-8 text-4xl justify-center md:justify-start mt-8">
+      <a href="https://www.instagram.com/aman_balara" target="_blank" class="social-icon text-white hover:text-pink-400"><i data-feather="instagram"></i></a>
+      <a href="https://github.com/amanbalara" target="_blank" class="social-icon text-white hover:text-purple-400"><i data-feather="github"></i></a>
+      <a href="https://www.linkedin.com/in/amanbalara/" target="_blank" class="social-icon text-white hover:text-blue-400"><i data-feather="linkedin"></i></a>
+      <a href="mailto:connect.amanbalara@gmail.com" class="social-icon text-white hover:text-red-400"><i data-feather="mail"></i></a>
+    </div>
+  </div>
+</section>
 
   <!-- About Section -->
   <section id="about" class="py-20 px-6">
@@ -154,20 +156,13 @@
     anime({ targets: '.subtitle', translateY: [20, 0], opacity: [0, 1], duration: 1000, delay: 300, easing: 'easeOutExpo' });
     anime({ targets: '.social-icon', translateY: [30, 0], opacity: [0, 1], delay: anime.stagger(100, {start: 800}), duration: 800, easing: 'easeOutBack' });
 
+    
     const funnyComments = [
-      "(but don’t worry, not the “studies 24/7” type — results == 0 😭)",
-      "(library rat? Nah… caffeine addict 😂)",
-      "(not studying full-time, just vibin’ and surviving 🤪)",
-    ];
-    document.querySelector('.funny-comment').innerHTML = funnyComments[Math.floor(Math.random() * funnyComments.length)];
-
-    const jokes = [
-      "I’m not lazy, just on energy-saving mode 😴",
-      "Life’s too short for bad coffee ☕",
-      "If volleyball was easy, it would be called basketball 🏐😏",
-      "Library rat? Nah… I prefer hostel gossip 😜"
-    ];
-    document.getElementById("footer-joke").innerText = jokes[Math.floor(Math.random() * jokes.length)];
+  "Don’t worry, I’m not studying 24/7 😂",
+  "Library rat? Nah… caffeine addict ☕😂",
+  "Just vibin’ and surviving hostel life 🤪",
+];
+  document.getElementById("footer-joke").innerText = jokes[Math.floor(Math.random() * jokes.length)];
 
     const memeFacts = [
       "Bananas are berries, but strawberries aren’t. 🤯",
