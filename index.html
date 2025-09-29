@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aman Balara - Funny One Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <style>
+    :root {
+      --primary: #4338ca;
+      --secondary: #f59e0b;
+    }
+    
+    body {
+      overflow-x: hidden;
+    }
+    
+    .hero-gradient {
+      background: linear-gradient(135deg, #000428 0%, #004e92 100%);
+      position: relative;
+      overflow: hidden;
+      min-height: 100vh;
+    }
+    
+    .hero-gradient::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('http://static.photos/space/1200x630/42') center/cover;
+      opacity: 0.15;
+      z-index: 1;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      padding: 0 2rem;
+    }
+    
+    .title-text {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 900;
+      letter-spacing: -0.05em;
+      line-height: 1.1;
+      background: linear-gradient(90deg, #f59e0b, #f97316, #ef4444);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 15px rgba(239, 68, 68, 0.2);
+    }
+    
+    .title-highlight {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .title-highlight::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 8px;
+      background: linear-gradient(90deg, #f59e0b, #f97316);
+      z-index: -1;
+      border-radius: 4px;
+      transform: scaleX(1.1) skewX(-15deg);
+    }
+    
+    .subtitle {
+      font-size: 1.5rem;
+      line-height: 1.6;
+      max-width: 42rem;
+      margin: 0 auto 2rem;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    .status-badge {
+      display: inline-block;
+      background: linear-gradient(90deg, #ec4899, #f472b6);
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.875rem;
+      letter-spacing: 0.05em;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transform: translateY(0);
+      transition: all 0.3s ease;
+    }
+    
+    .status-badge:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    
+    .social-icon {
+      width: 3.5rem;
+      height: 3.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .social-icon:hover {
+      transform: translateY(-5px) scale(1.1);
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    .floating-particles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      pointer-events: none;
+    }
+    
+    .particle {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.6;
+      animation: float-up 15s infinite linear;
+    }
+    
+    @keyframes float-up {
+      0% {
+        transform: translateY(100vh) translateX(0) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 0.6;
+      }
+      90% {
+        opacity: 0.6;
+      }
+      100% {
+        transform: translateY(-100px) translateX(100px) rotate(360deg);
+        opacity: 0;
+      }
+    }
+    
+    .cursor-follower {
+      position: fixed;
+      width: 40px;
+      height: 40px;
+      background: radial-gradient(circle, rgba(255,215,0,0.4) 0%, rgba(255,215,0,0) 70%);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      mix-blend-mode: screen;
+      filter: blur(5px);
+    }
+  </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+  
+  <!-- Hero Section -->
+  <section class="hero-gradient min-h-screen flex flex-col justify-center items-center text-white px-6 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-tr from-purple-500/30 to-blue-500/30 animate-pulse"></div>
+    
+    <div class="relative z-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      
+      <!-- Left: Profile Picture -->
+      <div class="flex justify-center">
+        <img src="https://github.com/amanbalara/amanbalara/raw/main/aman.png" alt="Aman Balara" class="w-56 h-56 md:w-72 md:h-72 rounded-full border-4 border-yellow-400 shadow-2xl transform hover:scale-105 transition duration-300">
+      </div>
+
+      <!-- Right: Intro Text -->
+      <div class="hero-content text-center md:text-left space-y-6">
+        <h1 class="text-6xl font-extrabold animate-float drop-shadow-lg">
+          Yo, I’m <span class="text-yellow-300">Aman Balara</span>
+        </h1>
+        <p class="text-xl drop-shadow">Currently vibin’ at <strong>Vindy@IITD</strong></p>
+        <p class="text-lg max-w-xl">
+          Mechanical Engineering student (but don’t worry, not the “studies 24/7” type). 
+          I’m more of a <span class="font-semibold">curious explorer</span> — always down to learn new things, try, fail, laugh, repeat. 🤙
+        </p>
+        <p class="text-lg">
+          Relationship status: <span class="status-badge">Single</span> 💌
+        </p>
+
+        <!-- Social Icons -->
+        <div class="flex gap-8 text-4xl justify-center md:justify-start mt-8">
+          <a href="https://www.instagram.com/aman_balara" target="_blank" class="social-icon text-white hover:text-pink-400"><i data-feather="instagram"></i></a>
+          <a href="https://github.com/amanbalara" target="_blank" class="social-icon text-white hover:text-purple-400"><i data-feather="github"></i></a>
+          <a href="https://www.linkedin.com/in/amanbalara/" target="_blank" class="social-icon text-white hover:text-blue-400"><i data-feather="linkedin"></i></a>
+          <a href="mailto:connect.amanbalara@gmail.com" class="social-icon text-white hover:text-red-400"><i data-feather="mail"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 px-6">
+    <div class="section-card max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">About Me 🤔</h2>
+      <p>IITD mechanical dude, living hostel life at <strong>Vindy</strong>. Not the “library rat” — I like learning out of curiosity, not pressure. Think of me as someone mixing sports, tech, and random experiments with late-night hostel banter. 🔥</p>
+    </div>
+  </section>
+
+  <!-- Passions Section -->
+  <section id="passions" class="py-20 px-6 bg-yellow-50">
+    <div class="section-card max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">Passions & Vibes 🚀</h2>
+      <p>I’m big into <strong>Volleyball</strong> (way cooler than basketball, fight me 🏐😏) but still hoop sometimes 🏀. Love exploring how nature, humans, and machines vibe together. Basically chasing the paradox of the universe, one chai break at a time. ☕✨</p>
+    </div>
+  </section>
+
+  <!-- Fun Fact Section -->
+  <section id="fun" class="py-20 px-6">
+    <div class="section-card max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">Fun Bits 😂</h2>
+      <ul class="list-disc text-left inline-block">
+        <li>Hostel: <strong>Vindy@IITD</strong> 🏢</li>
+        <li>Relationship status: single (ready to mingle, haha) 💔</li>
+        <li>Mess food survival skill: 100/100 (maggi is bae) 🍜</li>
+        <li>Curiosity meter: off the charts ⚡</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 px-6 bg-gray-100">
+    <div class="section-card max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">Hit Me Up 📬</h2>
+      <p class="mb-6">Wanna collab, vibe, or just roast mess food with me? Stalk me here:</p>
+      <div class="flex justify-center gap-8 text-2xl">
+        <a href="https://www.instagram.com/aman_balara" target="_blank" class="hover:text-pink-500"><i data-feather="instagram"></i></a>
+        <a href="https://github.com/amanbalara" target="_blank" class="hover:text-gray-800"><i data-feather="github"></i></a>
+        <a href="https://www.linkedin.com/in/amanbalara/" target="_blank" class="hover:text-blue-600"><i data-feather="linkedin"></i></a>
+        <a href="mailto:connect.amanbalara@gmail.com" class="hover:text-red-500"><i data-feather="mail"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    feather.replace();
+    anime({
+      targets: '.title-highlight',
+      translateY: [-20, 0],
+      opacity: [0, 1],
+      delay: anime.stagger(100),
+      duration: 1000,
+      easing: 'easeOutExpo'
+    });
+    anime({
+      targets: '.subtitle',
+      translateY: [20, 0],
+      opacity: [0, 1],
+      duration: 1000,
+      delay: 300,
+      easing: 'easeOutExpo'
+    });
+    anime({
+      targets: '.social-icon',
+      translateY: [30, 0],
+      opacity: [0, 1],
+      delay: anime.stagger(100, {start: 800}),
+      duration: 800,
+      easing: 'easeOutBack'
+    });
+  </script>
+</body>
+</html>
