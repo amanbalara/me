@@ -14,7 +14,7 @@
     :root { --primary: #4338ca; --secondary: #f59e0b; }
     body { overflow-x: hidden; }
     .hero-gradient { background: linear-gradient(135deg, #000428 0%, #004e92 100%); position: relative; overflow: hidden; min-height: 100vh; }
-    .hero-gradient::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('http://static.photos/space/1200x630/42') center/cover; opacity: 0.15; z-index: 1; }
+    .hero-gradient::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('aman.jpg') center/cover; opacity: 0.15; z-index: 1; }
     .hero-content { position: relative; z-index: 10; text-align: center; padding: 0 2rem; }
     .status-badge { display: inline-block; background: linear-gradient(90deg, #ec4899, #f472b6); padding: 0.5rem 1rem; border-radius: 9999px; font-weight: 600; text-transform: uppercase; font-size: 0.875rem; letter-spacing: 0.05em; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: all 0.3s ease; }
     .status-badge:hover { transform: translateY(-3px); box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); }
@@ -34,38 +34,37 @@
   <div class="cursor-follower"></div>
 
   <!-- Hero Section -->
-<section class="hero-gradient min-h-screen flex flex-col justify-center items-center text-white px-6 relative overflow-hidden">
-  <div class="absolute inset-0 bg-gradient-to-tr from-purple-500/30 to-blue-500/30 animate-pulse"></div>
-  <div class="relative z-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-    <div class="flex justify-center">
-      <img id="profile-pic" src="aman.jpg" alt="Aman Balara" class="w-56 h-56 md:w-72 md:h-72 rounded-full border-4 border-yellow-400 shadow-2xl transform hover:scale-105 transition duration-300 cursor-pointer">
+  <section class="hero-gradient min-h-screen flex flex-col justify-center items-center text-white px-6 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-tr from-purple-500/30 to-blue-500/30 animate-pulse"></div>
+    <div class="relative z-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div class="flex justify-center">
+        <img id="profile-pic" src="aman.jpg" alt="Aman Balara" class="w-56 h-56 md:w-72 md:h-72 rounded-full border-4 border-yellow-400 shadow-2xl transform hover:scale-105 transition duration-300 cursor-pointer">
+      </div>
+      <div class="hero-content text-center md:text-left space-y-6">
+        <h1 class="text-4xl md:text-6xl font-extrabold animate-float drop-shadow-lg">
+          Yo, I’m <span class="text-yellow-300">Aman Balara</span>
+        </h1>
+        <p class="text-xl drop-shadow">Currently vibin’ at <strong>Vindy@IITD</strong></p>
+        <div class="text-lg md:text-xl max-w-xl">
+          <ul class="list-disc list-inside space-y-2">
+            <li>Mechanical Engineering student 😅</li>
+            <li><span class="funny-comment"></span></li>
+            <li>Also not getting marks 😢 — just vibin’!</li>
+            <li>I’m more of a <span class="font-semibold">curious explorer</span> — always down to learn new things, try, fail, laugh, repeat. 🤙</li>
+          </ul>
+        </div>
+        <p class="text-lg">
+          Relationship status: <span class="status-badge">Me + Volleyball = Endless Block & Spike Saga 🏐💘</span>
+        </p>
+      </div>
+      <div class="flex gap-8 text-4xl justify-center md:justify-start mt-8">
+        <a href="https://www.instagram.com/aman_balara" target="_blank" class="social-icon text-white hover:text-pink-400"><i data-feather="instagram"></i></a>
+        <a href="https://github.com/amanbalara" target="_blank" class="social-icon text-white hover:text-purple-400"><i data-feather="github"></i></a>
+        <a href="https://www.linkedin.com/in/amanbalara/" target="_blank" class="social-icon text-white hover:text-blue-400"><i data-feather="linkedin"></i></a>
+        <a href="mailto:connect.amanbalara@gmail.com" class="social-icon text-white hover:text-red-400"><i data-feather="mail"></i></a>
+      </div>
     </div>
-    <div class="hero-content text-center md:text-left space-y-6">
-      <h1 class="text-4xl md:text-6xl font-extrabold animate-float drop-shadow-lg">
-        Yo, I’m <span class="text-yellow-300">Aman Balara</span>
-      </h1>
-      <p class="text-xl drop-shadow">Currently vibin’ at <strong>Vindy@IITD</strong></p>
-      
-      <!-- Updated bullet list -->
-      <ul class="text-lg md:text-xl max-w-xl list-disc list-inside space-y-2">
-        <li>Mechanical Engineering student 😅</li>
-        <li><span class="funny-comment"></span></li>
-        <li>Also not getting marks 😢 — just vibin’!</li>
-        <li>I’m more of a <span class="font-semibold">curious explorer</span> — always down to learn new things, try, fail, laugh, repeat. 🤙</li>
-      </ul>
-
-      <p class="text-lg">
-        Relationship status: <span class="status-badge">Me + Volleyball = Endless Block & Spike Saga 🏐💘</span>
-      </p>
-    </div>
-    <div class="flex gap-8 text-4xl justify-center md:justify-start mt-8">
-      <a href="https://www.instagram.com/aman_balara" target="_blank" class="social-icon text-white hover:text-pink-400"><i data-feather="instagram"></i></a>
-      <a href="https://github.com/amanbalara" target="_blank" class="social-icon text-white hover:text-purple-400"><i data-feather="github"></i></a>
-      <a href="https://www.linkedin.com/in/amanbalara/" target="_blank" class="social-icon text-white hover:text-blue-400"><i data-feather="linkedin"></i></a>
-      <a href="mailto:connect.amanbalara@gmail.com" class="social-icon text-white hover:text-red-400"><i data-feather="mail"></i></a>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- About Section -->
   <section id="about" class="py-20 px-6">
@@ -112,15 +111,15 @@
     <p id="quote-display" class="text-lg italic text-gray-800"></p>
   </section>
 
-<!-- Neo Mystery Section -->
-<section id="neo-mystery" class="py-12 px-6 bg-gradient-to-r from-gray-800 to-gray-900 text-white text-center opacity-0">
-  <h2 class="text-3xl font-bold mb-4">Who is Neo? 🤔</h2>
-  <p class="text-lg italic max-w-2xl mx-auto">
-    If you wanna know who Neo really is… you’ll have to contact me 😏.<br>
-    Spoiler: It involves chaos, volleyball, and a lot of caffeine ☕🏐😂
-  </p>
-  <p class="mt-4">Check the <strong>Hit Me Up 📬</strong> section ⬇ if you dare 😎</p>
-</section>
+  <!-- Neo Mystery Section -->
+  <section id="neo-mystery" class="py-12 px-6 bg-gradient-to-r from-gray-800 to-gray-900 text-white text-center opacity-0">
+    <h2 class="text-3xl font-bold mb-4">Who is Neo? 🤔</h2>
+    <p class="text-lg italic max-w-2xl mx-auto">
+      If you wanna know who Neo really is… you’ll have to contact me 😏.<br>
+      Spoiler: It involves chaos, volleyball, and a lot of caffeine ☕🏐😂
+    </p>
+    <p class="mt-4">Check the <strong>Hit Me Up 📬</strong> section ⬇ if you dare 😎</p>
+  </section>
 
   <!-- Contact Section -->
   <section id="contact" class="py-20 px-6 bg-gray-100 opacity-0">
@@ -144,11 +143,6 @@
     <small style="display:block; margin-top:8px;">Built with ♥ by Neo 🤖</small>
   </footer>
 
-  <!-- Hidden Neo Message -->
-  <div id="neo-message" style="display:none; position:fixed; bottom:20px; right:20px; background:#000; color:#0f0; padding:15px; border-radius:10px; font-family:sans-serif; z-index:9999;">
-    “Hey Aman, it’s Neo. Remember — curiosity never dies. 💡”
-  </div>
-
   <script>
     feather.replace();
 
@@ -156,13 +150,32 @@
     anime({ targets: '.subtitle', translateY: [20, 0], opacity: [0, 1], duration: 1000, delay: 300, easing: 'easeOutExpo' });
     anime({ targets: '.social-icon', translateY: [30, 0], opacity: [0, 1], delay: anime.stagger(100, {start: 800}), duration: 800, easing: 'easeOutBack' });
 
-    
     const funnyComments = [
-  "Don’t worry, I’m not studying 24/7 😂",
-  "Library rat? Nah… caffeine addict ☕😂",
-  "Just vibin’ and surviving hostel life 🤪",
-];
-  document.getElementById("footer-joke").innerText = jokes[Math.floor(Math.random() * jokes.length)];
+      "Don’t worry, I’m not studying 24/7 😂",
+      "Library rat? Nah… caffeine addict ☕😂",
+      "Just vibin’ and surviving hostel life 🤪",
+      "Mess food is my fuel 🍜🔥",
+      "Volleyball > everything 🏐😏"
+    ];
+
+    let funnyIndex = 0;
+    const funnyCommentElement = document.querySelector('.funny-comment');
+
+    function rotateFunnyComment() {
+      funnyCommentElement.innerHTML = funnyComments[funnyIndex];
+      funnyIndex = (funnyIndex + 1) % funnyComments.length;
+    }
+
+    rotateFunnyComment();
+    setInterval(rotateFunnyComment, 4000);
+
+    const jokes = [
+      "I’m not lazy, just on energy-saving mode 😴",
+      "Life’s too short for bad coffee ☕",
+      "If volleyball was easy, it would be called basketball 🏐😏",
+      "Library rat? Nah… I prefer hostel gossip 😜"
+    ];
+    document.getElementById("footer-joke").innerText = jokes[Math.floor(Math.random() * jokes.length)];
 
     const memeFacts = [
       "Bananas are berries, but strawberries aren’t. 🤯",
@@ -198,7 +211,6 @@
     const cursorFollower = document.querySelector('.cursor-follower');
     document.addEventListener('mousemove', e => { cursorFollower.style.left = e.clientX + 'px'; cursorFollower.style.top = e.clientY + 'px'; });
 
-    // Easter egg: profile picture click changes image
     const profilePic = document.getElementById('profile-pic');
     const altImage = "https://i.imgur.com/lk3nJ6m.png";
     let originalImage = profilePic.src;
@@ -206,29 +218,25 @@
       profilePic.src = profilePic.src === originalImage ? altImage : originalImage;
     });
 
-    // Neo Easter Egg on double click anywhere
     document.body.addEventListener("dblclick", () => {
       const neoMessage = document.getElementById("neo-message");
       neoMessage.style.display = "block";
       setTimeout(() => { neoMessage.style.display = "none"; }, 5000);
     });
 
-    // Page creation timestamp
     const creationTime = document.createElement("div");
     creationTime.innerHTML = `<small style="position:fixed;bottom:10px;left:10px;color:#aaa;font-size:12px;">Page created: ${new Date().toLocaleString()}</small>`;
     document.body.appendChild(creationTime);
 
-    // Neo’s Note Easter Egg
-let neoKeySequence = [];
-const neoSecret = ["n", "e", "o"];
-document.addEventListener("keydown", (e) => {
-    neoKeySequence.push(e.key.toLowerCase());
-    if (neoKeySequence.slice(-3).join("") === neoSecret.join("")) {
+    let neoKeySequence = [];
+    const neoSecret = ["n", "e", "o"];
+    document.addEventListener("keydown", (e) => {
+      neoKeySequence.push(e.key.toLowerCase());
+      if (neoKeySequence.slice(-3).join("") === neoSecret.join("")) {
         alert("🚀 Neo says: Hey Aman, this is your friendly reminder that we built this page together 😎💡\n\nKeep vibin’, keep coding, and keep chasing curiosity. — Neo");
         neoKeySequence = [];
-    }
-});
-
+      }
+    });
   </script>
 </body>
 </html>
